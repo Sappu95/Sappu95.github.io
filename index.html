@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sapna Kumari - Full Stack Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navbar Styles */
+        nav {
+            position: fixed;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+            background-color: #2b2d42;
+        }
+
+        .navbar {
+            position: fixed;
+        }
+
+        nav .logo {
+            font-size: 30px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        /* Header Section */
+        header {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #778397;
+            padding: 50px 100px;
+            color: #310707;
+        }
+
+        .header-left a {
+
+            padding-left: 40px;
+            margin-right: 15px;
+            font-size: 20px;
+        }
+
+        .header-left img {
+
+
+            width: 50px;
+            height: 50px;
+        }
+
+        .header-right {
+            text-align: center;
+        }
+
+        .header-right h1 {
+            color: #2b2d42;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .header-right p {
+            color: #530707;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .header-right img {
+            width: 350px;
+            border-radius: 150%;
+            box-shadow: 0 0 10px rgba(36, 3, 3, 0.11);
+        }
+
+        /* About Section */
+        .about-container {
+            display: flex;
+            padding: 50px 100px;
+            background-color: #7f91af;
+        }
+
+        .about-content {
+            box-shadow: 0 0 10px rgba(36, 3, 3, 0.11);
+            display: flex;
+            padding: 20px;
+            justify-content: space-between;
+            width: 100%;
+
+        }
+
+        .about-content img {
+            padding-left: 50px;
+
+            height: 90%;
+            border-radius: 10px;
+            width: 35%;
+        }
+
+        .about-description {
+            background-color: hsl(0, 63%, 89%);
+            border-radius: 40px;
+            width: 45%;
+            height: 80%;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(36, 3, 3, 0.11);
+        }
+
+
+
+        .about-description p {
+            font-size: 28px;
+            line-height: 1.5;
+            color: #062402;
+        }
+
+        /* Skills Section */
+        .skill {
+            text-align: center;
+            background-color: #7f91af;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px;
+            background-color: #7f91af;
+        }
+
+        .skills-category {
+            background-color: #81adda;
+            width: 30%;
+            padding: 10px;
+        }
+
+        .skills-category h2 {
+            text-decoration: underline;
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .skill-icons {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+
+        .skill-icons img {
+            width: 40px;
+            margin: 10px;
+            transform: rotateZ('angle');
+        }
+
+
+        .icon-name {
+            font-size: large;
+            color: #06081b;
+            padding: 10px;
+        }
+
+        /* Projects Section */
+        .projects-container {
+            text-align: center;
+            padding: 50px;
+            background-color: #7f91af;
+        }
+
+        .projects-container h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        .project {
+            margin: 20px;
+        }
+
+        .pro-discription {
+            color: #460707;
+            text-align: center;
+            font-size: 25px;
+            line-height: 1.5;
+            box-shadow: #06081b;
+
+        }
+
+        .project img {
+            width: 80%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .project-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 55px;
+        }
+
+        .project-buttons .btn {
+            background-color: #2b2d42;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .project-buttons .btn:hover {
+            background-color: #6ea19b;
+            color: rgb(0, 0, 0);
+        }
+
+        /* Contact Section */
+        .contact-container {
+            text-align: center;
+            padding: 50px;
+            background-color: #7d90b9;
+        }
+
+
+        .contact-info {
+            background-color: #7d90b9;
+           padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(128, 10, 10, 0.11);
+            gap: 10px;
+        }
+
+        .contact {
+            background-color: #7d90b9;
+            text-align: center;
+
+        }
+
+        .contact h2 {
+            font-size: 34px;
+            color: #131a2b;
+            text-decoration: underline;
+        }
+
+        .contact-item {
+            display: flex;
+            flex-direction: column;
+            background-color: #bfade0;
+            box-shadow: 0 0 10px rgba(128, 10, 10, 0.11);
+            margin: 5%;
+            border-radius: 50px;
+
+
+
+
+        }
+
+        .contact-item h3 {
+            font-size: 30px;
+            margin: 20px;
+
+        }
+        .contact-item a{
+            color: #460707;
+
+        }
+
+
+
+        /* Footer Section */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background-color: #2b2d42;
+            color: #fff;
+        }
+
+        footer .social-icons a {
+            margin: 0 10px;
+            font-size: 20px;
+        }
+
+        footer .social-icons img {
+            width: 30px;
+            height: 30px;
+        }
+        @media (max-width: 1200px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .header-left a {
+        padding-left: 20px;
+    }
+
+    .header-right img {
+        width: 250px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-content img {
+        width: 70%;
+        height: auto;
+    }
+
+    .about-description {
+        width: 80%;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .skills-category {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .skill-icons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .skill-icons div {
+        margin: 10px;
+    }
+
+    .projects-container {
+        padding: 30px;
+    }
+
+    .project img {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        padding-top: 20px;
+    }
+
+    nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .about-container {
+        padding: 20px;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-description {
+        width: 90%;
+    }
+
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .skills-category {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .skills-category h2 {
+        font-size: 22px;
+    }
+
+    .contact-container {
+        padding: 30px;
+    }
+
+    footer {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-right h1 {
+        font-size: 30px;
+    }
+
+    .header-right p {
+        font-size: 16px;
+    }
+
+    .header-right img {
+        width: 200px;
+    }
+
+    .about-description p {
+        font-size: 20px;
+    }
+
+    .skills-category h2 {
+        font-size: 20px;
+    }
+
+    .projects-container h2 {
+        font-size: 28px;
+    }
+
+    .project img {
+        width: 100%;
+    }
+
+    .contact-item h3 {
+        font-size: 24px;
+    }
+
+    footer .social-icons a {
+        font-size: 18px;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <!-- Navbar Section -->
+    <nav class="Navbar">
+        <div class="logo">SKG</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#Skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="https://github.com/Sappu95" target="_blank">Github</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#" onclick="openAndDownloadPDF()"> Resume </a></li>
+        </ul>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-content">
+            <div class="header-left">
+                <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit"
+                    target="_blank"><img src="https://www.freepnglogos.com/uploads/linkedin-in-logo-png-1.png"
+                        alt="LinkedIn"></a>
+                <a href="https://github.com/Sappu95" target="_blank"><img
+                        src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png"
+                        alt="GitHub"></a>
+                <a href="https://mail.google.com/mail/u/0/#inbox?compose=new"><img
+                        src="https://www.pngall.com/wp-content/uploads/12/Gmail-Logo-PNG-Images.png" alt="Email"></a>
+            </div>
+            <div class="header-right">
+                <h1>Sapna Kumari</h1>
+                <p>Full Stack Developer</p>
+                <img src="profile-pic.png" alt="Profile Picture">
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-container">
+
+        <div class="about-content">
+            <img src="IMG_20231119_171229 (1).jpg" alt="Developer Image">
+            <div class="about-description">
+                <p>
+                    I am a Full Stack Developer skilled in both front-end and back-end technologies.
+                    I love creating dynamic and responsive websites. With proficiency in HTML, CSS, JavaScript, Node.js,
+                    and more, I aim to build seamless and user-friendly experiences.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+
+    <section id="Skills">
+        <div class="skill">
+            <h1>Skills</h1>
+        </div>
+        <div class="skills-container">
+            <div class="skills-category">
+                <h2>Frontend Developer</h2>
+                <div class="skill-icons">
+                    <div>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBd2rMcfI56SZEenhvautbZl_xUsPSHaktNw&s"
+                            alt="HTML">
+                        <p class="icon-name">HTML</p>
+                    </div>
+                    <div>
+                        <img src="https://w7.pngwing.com/pngs/696/424/png-transparent-logo-css-css3-thumbnail.png"
+                            alt="CSS">
+                        <P class="icon-name">CSS</P>
+                    </div>
+                    <div>
+                        <img src="https://quintagroup.com/cms/js/js-image/javascript-logo.png" alt="JavaScript">
+                        <p class="icon-name">JavaScript</p>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h2>Backend Developer</h2>
+                <div class="skill-icons">
+                    <div><img src="https://miro.medium.com/v2/resize:fit:900/1*TY9uBBO9leUbRtlXmQBiug.png"
+                            alt="Node.js">
+                        <p class="icon-name">Node JS</p>
+                    </div>
+                    <div>
+                        <img src="https://www.peanutsquare.com/wp-content/uploads/2024/04/Express.png" alt="Express">
+                        <p class="icon-name">Express</p>
+                    </div>
+                    <div>
+                        <img src="https://i.pinimg.com/736x/b2/31/7e/b2317e8174e5fcef57c74c662f57d155.jpg"
+                            alt="MongoDB">
+                        <p class="icon-name">MongoDB</p>
+                    </div>
+                    <div>
+                        <img src="https://static-00.iconduck.com/assets.00/file-type-light-json-icon-256x256-037f9elb.png"
+                            alt="JSON">
+                        <p class="icon-name">JSON</p>
+                    </div>
+                    <div>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShkLKIXoV9cqkHD-60xblHWwHPtn3BDpWW4w&s"
+                            alt="NPM">
+                        <p class="icon-name">npm</p>
+                    </div>
+                </div>
+            </div>
+            <div class="skills-category">
+                <h2>Tools</h2>
+                <div class="skill-icons">
+                    <div>
+                        <img src="https://chris-ayers.com/assets/images/vscode-logo.png" alt="VSCode">
+                        <p class="icon-name">VSCode</p>
+                    </div>
+                    <div>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToJf5MyFh1CNyTPUIr1rTGqjH2UUypXQ37Zg&s"
+                            alt="GitHub">
+                        <p class="icon-name">GitHub</p>
+                    </div>
+
+                    <div>
+                        <img src="https://w7.pngwing.com/pngs/379/406/png-transparent-netlify-logos-brands-icon-thumbnail.png"
+                            alt="Netlify">
+                        <p class="icon-name">Netlify</p>
+                    </div>
+                    <div>
+                        <img src="https://w7.pngwing.com/pngs/28/245/png-transparent-postman-hd-logo-thumbnail.png"
+                            alt="Postman">
+                        <p class="icon-name">Postman</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-container">
+        <h2>Projects</h2>
+        <div class="project">
+            <img src="Screenshot 2025-03-19 172346.png" alt="Rashan ki dukan">
+
+            <p class="pro-discription"> rashan ki dukan is a beautiful and professional online<br> e-commerce website
+                for
+                selling daily household and grocery products.<br> It is an individual project inspired by Big
+                Basket,<br> and it
+                aims to provide a seamless shopping experience for users.</p>
+
+            <div class="project-buttons">
+                <a href="https://sappu95.github.io/projectone/" class="btn">Live Demo</a>
+                <a href="https://github.com/Sappu95" class="btn">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact">
+
+
+        <div class="contact-container">
+
+            <div class="contact-info">
+                <h2>Get in Touch</h2>
+                <div class="contact-item">
+                    <h3>Email Me</h3>
+                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=new">iamsapna.gautam.510@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <h3>WhatsApp Me</h3>
+                    <a href="https://web.whatsapp.com/">7081458124</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 Sapna Kumari. All Rights Reserved.</p>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/feed/?trk=guest_homepage-basic_google-one-tap-submit" target="_blank"><img
+                    src="https://www.freepnglogos.com/uploads/linkedin-in-logo-png-1.png" alt="LinkedIn"></a>
+            <a href="https://github.com/Sappu95" target="_blank"><img
+                    src="https://cdn-icons-png.flaticon.com/512/2111/2111432.png" alt="GitHub"></a>
+            <a href="https://mail.google.com/mail/u/0/#inbox?compose=new"><img
+                    src="https://www.pngall.com/wp-content/uploads/12/Gmail-Logo-PNG-Images.png" alt="Email"></a>
+        </div>
+    </footer>
+</body>
+<script>
+    function openAndDownloadPDF() {
+      // Open the resume link in a new tab
+      window.open(
+        "https://resume-builder-test-new.masaischool.com/resume/public?resumeId=67e2a64d216c363a74941ac6",
+        "_blank"
+      );
+
+      // Trigger file download
+      const a = document.createElement("a");
+      a.href = "./SapnaKumari-WebEngineer-w8w0.pdf"; // Ensure this file is accessible from the server
+      a.download = "SapnaKumari-WebEngineer-w8w0.pdf";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+  </script>
+</html>
